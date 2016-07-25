@@ -56,11 +56,8 @@ static NSString *const Identifier = @"CELL";
     [messageItem setTintColor:[UIColor blueColor]];
     self.navigationItem.rightBarButtonItem = messageItem;
     
-    
-    
     UIView *naCenterView = [UIView new];
     naCenterView.backgroundColor = [UIColor whiteColor];
-    
     [self.navigationController.navigationItem.titleView addSubview:naCenterView];
 }
 

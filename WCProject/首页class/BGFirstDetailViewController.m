@@ -9,23 +9,46 @@
 #import "BGFirstDetailViewController.h"
 #import "BGFirstDetailCell.h"
 #import "wcHeader.h"
+#import "BGHeaderView.h"
 
 static NSString *const Identifier = @"Cell";
 
 @interface BGFirstDetailViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong)UITableView *tableView;
+@property (nonatomic,strong)  BGHeaderView *headerView;
 
 @end
 
 @implementation BGFirstDetailViewController
 
+
+- (BGHeaderView *)headerView{
+    if (!_headerView) {
+        _headerView = [[BGHeaderView alloc] initWithFrame:CGRectZero];
+        _headerView.backgroundColor = [UIColor whiteColor];
+        _headerView.memuImageView.image = [UIImage imageNamed:@"bg_share"];
+        _headerView.nameLb.text = @"美味通";
+        _headerView.numLb.text = @"就餐人数：12";
+        _headerView.starView.scorePercent = 0.2;
+        _headerView.yueLb.text = @"约";
+        
+//        [self.view addSubview:_headerView];
+//        [_headerView mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.left.right.mas_equalTo(0);
+//            make.top.mas_equalTo(0);
+//            make.height.mas_equalTo(200);
+//        }];
+    }
+    return _headerView;
+}
+
 - (UITableView *)tableView{
     
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
         [_tableView registerClass:[BGFirstDetailCell class] forCellReuseIdentifier:Identifier];
         
-        _tableView.frame = CGRectMake(0, 100+64, kcScreenWidth, kcScreenHeight - 164);
+        _tableView.frame = CGRectMake(0, 0, kcScreenWidth, kcScreenHeight);
         
         [self.view addSubview:_tableView];
         self.automaticallyAdjustsScrollViewInsets = NO;
@@ -40,7 +63,9 @@ static NSString *const Identifier = @"Cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    //self.navigationController.navigationBar.alpha = 1.0;
     self.tableView.hidden = NO;
+  //  self.headerView.hidden = NO;
     // Do any additional setup after loading the view.
 }
 
@@ -69,8 +94,19 @@ static NSString *const Identifier = @"Cell";
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 110;
+    return 90;
 }
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    return self.headerView;
+}
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 200;
+}
+
+
 
 
 /*

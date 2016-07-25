@@ -18,9 +18,13 @@
 #import <AFNetworking.h>
 #import "NSObject+WCTool.h"
 #import "UIView+Frame.h"
+#import "Masonry.h"
 
 #define kcScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kcScreenHeight [UIScreen mainScreen].bounds.size.height
+#define weakself __weak __typeof(&*self)ws = self
+
+#define appYellow [UIColor colorWithRed:245.0/255 green:228.0/255 blue:0 alpha:1.0]
 
 
 #define SBColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
