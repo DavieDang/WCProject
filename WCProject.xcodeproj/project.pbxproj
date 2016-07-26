@@ -34,7 +34,10 @@
 		7479CA7B1D4124E500C3170B /* BaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7479CA781D4124E500C3170B /* BaseViewModel.m */; };
 		7479CA7F1D41253600C3170B /* BaseNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7479CA7E1D41253600C3170B /* BaseNetManager.m */; };
 		90C7B6A1E6C2D90D2634EED5 /* libPods-WCProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2D053B57FD0BA451305B7C1 /* libPods-WCProject.a */; };
+		E20EB80E1D47014E00C2881D /* BGLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E20EB80D1D47014E00C2881D /* BGLoginViewController.m */; };
+		E20EB8111D47100E00C2881D /* WCheadView.m in Sources */ = {isa = PBXBuildFile; fileRef = E20EB8101D47100E00C2881D /* WCheadView.m */; };
 		E22DFC131D408A9300EF40E9 /* BGFirstPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E22DFC121D408A9300EF40E9 /* BGFirstPageViewController.m */; };
+		E266D17F1D476CF7002CCCDB /* NaBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = E266D17E1D476CF7002CCCDB /* NaBarView.m */; };
 		E2C364A21D338C6F00AA5D95 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C364A11D338C6F00AA5D95 /* main.m */; };
 		E2C364A51D338C6F00AA5D95 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C364A41D338C6F00AA5D95 /* AppDelegate.m */; };
 		E2C364AD1D338C6F00AA5D95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2C364AC1D338C6F00AA5D95 /* Assets.xcassets */; };
@@ -119,8 +122,14 @@
 		7479CA7E1D41253600C3170B /* BaseNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNetManager.m; sourceTree = "<group>"; };
 		9D9106C1F98B46F01FD76DDC /* Pods-WCProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WCProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WCProject/Pods-WCProject.debug.xcconfig"; sourceTree = "<group>"; };
 		B2D053B57FD0BA451305B7C1 /* libPods-WCProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WCProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E20EB80C1D47014E00C2881D /* BGLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGLoginViewController.h; sourceTree = "<group>"; };
+		E20EB80D1D47014E00C2881D /* BGLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGLoginViewController.m; sourceTree = "<group>"; };
+		E20EB80F1D47100E00C2881D /* WCheadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WCheadView.h; sourceTree = "<group>"; };
+		E20EB8101D47100E00C2881D /* WCheadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WCheadView.m; sourceTree = "<group>"; };
 		E22DFC111D408A9300EF40E9 /* BGFirstPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGFirstPageViewController.h; sourceTree = "<group>"; };
 		E22DFC121D408A9300EF40E9 /* BGFirstPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGFirstPageViewController.m; sourceTree = "<group>"; };
+		E266D17D1D476CF7002CCCDB /* NaBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NaBarView.h; sourceTree = "<group>"; };
+		E266D17E1D476CF7002CCCDB /* NaBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NaBarView.m; sourceTree = "<group>"; };
 		E2C3649D1D338C6E00AA5D95 /* WCProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WCProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2C364A11D338C6F00AA5D95 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E2C364A31D338C6F00AA5D95 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -371,6 +380,8 @@
 		E208E6B91D41DE6800F45594 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E20EB80C1D47014E00C2881D /* BGLoginViewController.h */,
+				E20EB80D1D47014E00C2881D /* BGLoginViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -391,6 +402,8 @@
 		E22DFC141D408B7B00EF40E9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E266D17D1D476CF7002CCCDB /* NaBarView.h */,
+				E266D17E1D476CF7002CCCDB /* NaBarView.m */,
 				74697B191D45212100F96E27 /* BGSignupGuyView.h */,
 				74697B1A1D45212100F96E27 /* BGSignupGuyView.m */,
 				74697B101D44E12B00F96E27 /* BGFirstPageViewCell.h */,
@@ -399,6 +412,8 @@
 				74697B171D451DAF00F96E27 /* BGFirstDetailCell.m */,
 				E2DB90191D461EB0005B2455 /* BGHeaderView.h */,
 				E2DB901A1D461EB0005B2455 /* BGHeaderView.m */,
+				E20EB80F1D47100E00C2881D /* WCheadView.h */,
+				E20EB8101D47100E00C2881D /* WCheadView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -740,10 +755,13 @@
 				7479CA611D41233800C3170B /* CWStarRateView.m in Sources */,
 				E2DB90411D461EF9005B2455 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				E2C364E61D339CDA00AA5D95 /* NSObject+WCTool.m in Sources */,
+				E20EB80E1D47014E00C2881D /* BGLoginViewController.m in Sources */,
+				E266D17F1D476CF7002CCCDB /* NaBarView.m in Sources */,
 				74697AFF1D44DE7700F96E27 /* BGMeViewController.m in Sources */,
 				E2DB903C1D461EF9005B2455 /* MASConstraintMaker.m in Sources */,
 				74697B071D44DE7700F96E27 /* ZJCircularBtn.m in Sources */,
 				74697AED1D44DE3000F96E27 /* BGShareViewController.m in Sources */,
+				E20EB8111D47100E00C2881D /* WCheadView.m in Sources */,
 				74697B0D1D44DF3C00F96E27 /* WCTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

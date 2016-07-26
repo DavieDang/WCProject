@@ -13,9 +13,11 @@
 
 static NSString *const Identifier = @"Cell";
 
-@interface BGFirstDetailViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface BGFirstDetailViewController ()<UITableViewDelegate,UITableViewDataSource,UITabBarDelegate>
 @property (nonatomic,strong)UITableView *tableView;
 @property (nonatomic,strong)  BGHeaderView *headerView;
+
+@property (nonatomic,strong) NSMutableArray *headArray;
 
 @end
 
@@ -90,6 +92,17 @@ static NSString *const Identifier = @"Cell";
     BGFirstDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:Identifier forIndexPath:indexPath];
     cell.groupName.text = @"团123";
     
+    self.headArray = [NSMutableArray array];
+    [self.headArray addObject:@"aa"];
+    [self.headArray addObject:@"aaf"];
+    [self.headArray addObject:@"aaff"];
+    cell.headArr = self.headArray;
+    cell.headerbgView.hidden = NO;
+   //[cell headerbgViewWith:self.headArray];
+    
+   
+    [cell.yueBtn addTarget:self action:@selector(yueEvent:) forControlEvents:UIControlEventTouchUpInside];
+    
     return cell;
 }
 
@@ -106,8 +119,22 @@ static NSString *const Identifier = @"Cell";
     return 200;
 }
 
+- (void)yueEvent:(UIButton *)sender{
+    BGFirstDetailCell *cell = (BGFirstDetailCell *)[[sender superview] superview];
+    NSIndexPath *path = [self.tableView indexPathForCell:cell];
+    //[self.headArray addObject:@"fff"];
+    
+    [cell.headArr addObject:@"fff"];
+    
+    //[self.tableView reloadData];
+    [self.tableView reloadRowsAtIndexPaths:@[path] withRowAnimation:UITableViewRowAnimationNone];
 
-
+    [cell reloadmyData:self.headArray];
+    NSLog(@"=======%ld",cell.headArr.count);
+    
+   
+ 
+}
 
 /*
 #pragma mark - Navigation

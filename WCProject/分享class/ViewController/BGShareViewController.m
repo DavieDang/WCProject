@@ -237,6 +237,14 @@
 - (IBAction)shareMenu:(id)sender {
 }
 
+
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    
+    [self.navigationController.navigationBar setHidden:NO];
+    
+}
+
 /*
 #pragma mark - Navigation
 
