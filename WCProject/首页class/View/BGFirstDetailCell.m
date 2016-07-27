@@ -14,7 +14,7 @@
 
 -(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-        
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     return self;
 }
@@ -90,7 +90,7 @@
   //  [self.headerbgView removeFromSuperview];
     
      __weak __typeof(&*self)ws = self;
-    for (int i = 0; i < 7; i++) {
+    for (int i = 0; i < 5; i++) {
         UIImageView *imageView = [[UIImageView alloc]init];
         [imageView setTag:i+100];
         imageView.image = [UIImage imageNamed:@"caiicon.jpg"];

@@ -10,8 +10,10 @@
 #import "BGFirstDetailCell.h"
 #import "wcHeader.h"
 #import "BGHeaderView.h"
+#import "BSCommentCell.h"
 
 static NSString *const Identifier = @"Cell";
+static NSString *const Identifier2 = @"Cell2";
 
 @interface BGFirstDetailViewController ()<UITableViewDelegate,UITableViewDataSource,UITabBarDelegate>
 @property (nonatomic,strong)UITableView *tableView;
@@ -49,6 +51,7 @@ static NSString *const Identifier = @"Cell";
     if (!_tableView) {
         _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
         [_tableView registerClass:[BGFirstDetailCell class] forCellReuseIdentifier:Identifier];
+        [_tableView registerClass:[BSCommentCell class] forCellReuseIdentifier:Identifier2];
         
         _tableView.frame = CGRectMake(0, 0, kcScreenWidth, kcScreenHeight);
         
@@ -65,6 +68,7 @@ static NSString *const Identifier = @"Cell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
+    [self setNavigationStyle];
     //self.navigationController.navigationBar.alpha = 1.0;
     self.tableView.hidden = NO;
   //  self.headerView.hidden = NO;
@@ -80,7 +84,7 @@ static NSString *const Identifier = @"Cell";
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     
-    return 1;
+    return 2;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return 10;
@@ -89,51 +93,107 @@ static NSString *const Identifier = @"Cell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    BGFirstDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:Identifier forIndexPath:indexPath];
-    cell.groupName.text = @"团123";
-    
-    self.headArray = [NSMutableArray array];
-    [self.headArray addObject:@"aa"];
-    [self.headArray addObject:@"aaf"];
-    [self.headArray addObject:@"aaff"];
-    cell.headArr = self.headArray;
-    cell.headerbgView.hidden = NO;
-   //[cell headerbgViewWith:self.headArray];
-    
-   
-    [cell.yueBtn addTarget:self action:@selector(yueEvent:) forControlEvents:UIControlEventTouchUpInside];
-    
-    return cell;
+    if (indexPath.section == 0) {
+        BGFirstDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:Identifier forIndexPath:indexPath];
+        cell.groupName.text = @"团123";
+        
+        self.headArray = [NSMutableArray array];
+        [self.headArray addObject:@"aa"];
+        [self.headArray addObject:@"aaf"];
+        [self.headArray addObject:@"aaff"];
+        cell.headArr = self.headArray;
+        cell.headerbgView.hidden = NO;
+        
+        
+        
+        [cell.yueBtn addTarget:self action:@selector(yueEvent:) forControlEvents:UIControlEventTouchUpInside];
+        
+        return cell;
+    }else{
+        
+        BSCommentCell *cell = [tableView dequeueReusableCellWithIdentifier:Identifier2 forIndexPath:indexPath];
+        cell.headImageView.image = [UIImage imageNamed:@"caiicon.jpg"];
+        cell.nameLabel.text = @"吃货";
+        cell.commentLabel.text = @"很好很好6666666";
+        cell.bgStarView.hidden = NO;
+        cell.starView.scorePercent = 0.4;
+        cell.dateLabel.text = @"2016-07-25";
+        
+        
+        return cell;
+    }
+
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 90;
+    if (indexPath.section == 0) {
+        return 90;
+    }else{
+        
+        return 100;
+    }
+    
+    
+  
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    return self.headerView;
+    if (section == 0) {
+        return self.headerView;
+    }else{
+    
+    UIView *commentLbView = [UIView new];
+        commentLbView.backgroundColor = [UIColor colorWithRed:220.0/255 green:220.0/255 blue:220.0/255 alpha:1.0];
+    UILabel *label = [UILabel new];
+    label.text = @"全部评论";
+        label.font = [UIFont systemFontOfSize:15];
+    [commentLbView addSubview:label];
+    [label mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(12);
+        make.centerY.mas_equalTo(commentLbView);
+    }];
+    
+    return commentLbView;
+    }
 }
 
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    return 200;
+    if (section == 0) {
+        
+        return 200;
+    }else{
+        
+        return 30;
+    }
+   
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    return 0.1;
 }
 
 - (void)yueEvent:(UIButton *)sender{
     BGFirstDetailCell *cell = (BGFirstDetailCell *)[[sender superview] superview];
     NSIndexPath *path = [self.tableView indexPathForCell:cell];
-    //[self.headArray addObject:@"fff"];
     
     [cell.headArr addObject:@"fff"];
-    
-    //[self.tableView reloadData];
     [self.tableView reloadRowsAtIndexPaths:@[path] withRowAnimation:UITableViewRowAnimationNone];
 
     [cell reloadmyData:self.headArray];
     NSLog(@"=======%ld",cell.headArr.count);
     
-   
  
+}
+
+
+#pragma mark--导航栏
+
+- (void)setNavigationStyle{
+    
+
+    self.navigationItem.backBarButtonItem.image = [UIImage imageNamed:@"Back"];
+    self.navigationItem.backBarButtonItem.title = @"返回";
 }
 
 /*

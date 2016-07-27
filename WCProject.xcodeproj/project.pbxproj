@@ -38,6 +38,7 @@
 		E20EB8111D47100E00C2881D /* WCheadView.m in Sources */ = {isa = PBXBuildFile; fileRef = E20EB8101D47100E00C2881D /* WCheadView.m */; };
 		E22DFC131D408A9300EF40E9 /* BGFirstPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E22DFC121D408A9300EF40E9 /* BGFirstPageViewController.m */; };
 		E266D17F1D476CF7002CCCDB /* NaBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = E266D17E1D476CF7002CCCDB /* NaBarView.m */; };
+		E29DE3D01D4881DD00965CA9 /* BSCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E29DE3CF1D4881DD00965CA9 /* BSCommentCell.m */; };
 		E2C364A21D338C6F00AA5D95 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C364A11D338C6F00AA5D95 /* main.m */; };
 		E2C364A51D338C6F00AA5D95 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E2C364A41D338C6F00AA5D95 /* AppDelegate.m */; };
 		E2C364AD1D338C6F00AA5D95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2C364AC1D338C6F00AA5D95 /* Assets.xcassets */; };
@@ -130,6 +131,8 @@
 		E22DFC121D408A9300EF40E9 /* BGFirstPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGFirstPageViewController.m; sourceTree = "<group>"; };
 		E266D17D1D476CF7002CCCDB /* NaBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NaBarView.h; sourceTree = "<group>"; };
 		E266D17E1D476CF7002CCCDB /* NaBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NaBarView.m; sourceTree = "<group>"; };
+		E29DE3CE1D4881DC00965CA9 /* BSCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BSCommentCell.h; path = ../BSCommentCell.h; sourceTree = "<group>"; };
+		E29DE3CF1D4881DD00965CA9 /* BSCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BSCommentCell.m; path = ../BSCommentCell.m; sourceTree = "<group>"; };
 		E2C3649D1D338C6E00AA5D95 /* WCProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WCProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2C364A11D338C6F00AA5D95 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E2C364A31D338C6F00AA5D95 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -402,6 +405,8 @@
 		E22DFC141D408B7B00EF40E9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E29DE3CE1D4881DC00965CA9 /* BSCommentCell.h */,
+				E29DE3CF1D4881DD00965CA9 /* BSCommentCell.m */,
 				E266D17D1D476CF7002CCCDB /* NaBarView.h */,
 				E266D17E1D476CF7002CCCDB /* NaBarView.m */,
 				74697B191D45212100F96E27 /* BGSignupGuyView.h */,
@@ -738,6 +743,7 @@
 				7479CA6F1D41248900C3170B /* UIColor+Extension.m in Sources */,
 				E2DB903D1D461EF9005B2455 /* MASLayoutConstraint.m in Sources */,
 				E2DB90401D461EF9005B2455 /* NSArray+MASAdditions.m in Sources */,
+				E29DE3D01D4881DD00965CA9 /* BSCommentCell.m in Sources */,
 				74697B1B1D45212100F96E27 /* BGSignupGuyView.m in Sources */,
 				74697B121D44E12B00F96E27 /* BGFirstPageViewCell.m in Sources */,
 				E2DB903B1D461EF9005B2455 /* MASConstraint.m in Sources */,

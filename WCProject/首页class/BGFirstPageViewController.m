@@ -15,10 +15,10 @@
 
 static NSString *const Identifier = @"CELL";
 
-@interface BGFirstPageViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface BGFirstPageViewController ()<UITableViewDelegate,UITableViewDataSource,UISearchBarDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-
 @property (nonatomic,strong)  UITextView *textView;
+@property (nonatomic,strong)   UISearchBar *search;
 
 @end
 
@@ -36,7 +36,7 @@ static NSString *const Identifier = @"CELL";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
 
     BGFirstPageViewCell *cell = [tableView dequeueReusableCellWithIdentifier:Identifier forIndexPath:indexPath];
-    //cell.headImageView.backgroundColor = [UIColor redColor];
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.peopleNumber.text = [NSString stringWithFormat:@"%d",15];
     cell.headImageView.image = [UIImage imageNamed:@"caiicon.jpg"];
     CWStarRateView *start = [[CWStarRateView alloc] initWithFrame:CGRectMake(0, -5, 90, 30) numberOfStars:5];
@@ -51,6 +51,10 @@ static NSString *const Identifier = @"CELL";
     
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [self.search resignFirstResponder];
+}
+
 -(void)navigationStyle{
 
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:245.0/255 green:228.0/255 blue:0 alpha:1.0];
@@ -62,72 +66,41 @@ static NSString *const Identifier = @"CELL";
     naCenterView.backgroundColor = [UIColor whiteColor];
     naCenterView.frame = CGRectMake(0, 0, 200, 50);
     
-    
-  //  [self.navigationController.navigationBar setHidden:YES];
-    
-//       self.textView = [[UITextView alloc] init];
-//    
-//        self.textView.backgroundColor = [UIColor redColor];
-//    
-//        [self.view addSubview:self.textView];
-//        [self.textView mas_makeConstraints:^(MASConstraintMaker *make) {
-//            make.top.mas_equalTo(50);
-//            make.left.mas_equalTo(30);
-//            make.right.mas_equalTo(-30);
-//            make.height.mas_equalTo(30);
-//        }];
-//    
-//        self.textView.layer.cornerRadius = 15;
-//        self.textView.layer.masksToBounds = YES;
-    
-   // self.navigationItem.titleView = naCenterView;
-    
-    
-    
-    
-    
-//    self.automaticallyAdjustsScrollViewInsets = NO;
-//    [self.navigationController.navigationBar setHidden:YES];
-//    NaBarView  *naview = [[NaBarView alloc] init];
-//    naview.backgroundColor = appYellow;
-//    [self.view addSubview:naview];
-//    [naview mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.left.top.right.mas_equalTo(0);
-//        make.height.mas_equalTo(64);
-//    }];
-    
-//   self.textView = [[UITextView alloc] init];
-//  
-//    [naview addSubview:self.textView];
-//    [self.textView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.top.mas_equalTo(naview.mas_top).offset(25);
-//        make.left.mas_equalTo(naview.mas_left).offset(30);
-//        make.right.mas_equalTo(-30);
-//        make.height.mas_equalTo(30);
-//    }];
-//
-//    self.textView.layer.cornerRadius = 15;
-//    self.textView.layer.masksToBounds = YES;
-    
-    
-  //  [naview.moreBtn addTarget:self action:@selector(message) forControlEvents:UIControlEventTouchUpInside];
-}
+   // self.automaticallyAdjustsScrollViewInsets = NO;
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    [self.navigationController pushViewController:[BGFirstDetailViewController new] animated:YES];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return UITableViewAutomaticDimension;
 }
 
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    
+    self.search = [[UISearchBar alloc]initWithFrame:CGRectMake(0, 0, self.tableView.frame.size.width, 50)];
+    self.search.delegate = self;
+    _search.placeholder = @"输入附近的餐厅名";
+    
+    return self.search;
+    
+    
+}
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 50;
+}
+
 #pragma mark -- 点击事件
+
+
 - (void)message{
     NSLog(@"提醒消息");
 }
 
+- (IBAction)lookCanteen:(id)sender {
+    
+     [self.navigationController pushViewController:[BGFirstDetailViewController new] animated:YES];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -144,22 +117,77 @@ static NSString *const Identifier = @"CELL";
 }
 
 
-- (void)viewDidAppear:(BOOL)animated{
-    self.textView = [[UITextView alloc] init];
+-(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText{
     
-    self.textView.backgroundColor = [UIColor redColor];
     
-    [self.view addSubview:self.textView];
-    [self.textView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(50);
-        make.left.mas_equalTo(30);
-        make.right.mas_equalTo(-30);
-        make.height.mas_equalTo(30);
-    }];
+    NSMutableArray *addarray = [NSMutableArray array];
+    NSString *searchTexte = self.search.text;
+    NSMutableArray *searchResults = addarray;
     
-    self.textView.layer.cornerRadius = 15;
-    self.textView.layer.masksToBounds = YES;
+    // strip out all the leading and trailing spaces
+    NSString *strippedString = [searchTexte stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    
+    // break up the search terms (separated by spaces)
+    NSArray *searchItems = nil;
+    if (strippedString.length > 0) {
+        searchItems = [strippedString componentsSeparatedByString:@" "];
+    }
+    
+    // build all the "AND" expressions for each value in the searchString
+    //
+    NSMutableArray *andMatchPredicates = [NSMutableArray array];
+    
+    for (NSString *searchString in searchItems) {
+        // each searchString creates an OR predicate for: name, id
+        //
+        // example if searchItems contains "iphone 599 2007":
+        //      name CONTAINS[c] "lanmaq"
+        //      id CONTAINS[c] "1568689942"
+        NSMutableArray *searchItemsPredicate = [NSMutableArray array];
+        
+        // use NSExpression represent expressions in predicates.
+        // NSPredicate is made up of smaller, atomic parts: two NSExpressions (a left-hand value and a right-hand value)
+        
+        // friendName field matching
+        NSExpression *lhs = [NSExpression expressionForKeyPath:@"name"];
+        NSExpression *rhs = [NSExpression expressionForConstantValue:searchString];
+        NSPredicate *finalPredicate = [NSComparisonPredicate
+                                       predicateWithLeftExpression:lhs
+                                       rightExpression:rhs
+                                       modifier:NSDirectPredicateModifier
+                                       type:NSContainsPredicateOperatorType
+                                       options:NSCaseInsensitivePredicateOption];
+        [searchItemsPredicate addObject:finalPredicate];
+        
+        // friendId field matching
+        
+        lhs = [NSExpression expressionForKeyPath:@"address"];
+        rhs = [NSExpression expressionForConstantValue:searchString];
+        finalPredicate = [NSComparisonPredicate
+                          predicateWithLeftExpression:lhs
+                          rightExpression:rhs
+                          modifier:NSDirectPredicateModifier
+                          type:NSContainsPredicateOperatorType
+                          options:NSCaseInsensitivePredicateOption];
+        [searchItemsPredicate addObject:finalPredicate];
+        
+        
+        
+        // at this OR predicate to our master AND predicate
+        NSCompoundPredicate *orMatchPredicates = [NSCompoundPredicate orPredicateWithSubpredicates:searchItemsPredicate];
+        [andMatchPredicates addObject:orMatchPredicates];
+    }
+    
+    // match up the fields of the Product object
+    NSCompoundPredicate *finalCompoundPredicate =
+    [NSCompoundPredicate andPredicateWithSubpredicates:andMatchPredicates];
+    searchResults = [[searchResults filteredArrayUsingPredicate:finalCompoundPredicate] mutableCopy];
+    
+    
+
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -167,9 +195,6 @@ static NSString *const Identifier = @"CELL";
 }
 
 
--(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
-    [self.textView resignFirstResponder];
-}
 /*
 #pragma mark - Navigation
 

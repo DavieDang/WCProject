@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "wcHeader.h"
+
 
 @interface AppDelegate ()
 
@@ -17,7 +19,18 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    
+    
     [[UITabBar appearance] setTintColor:[UIColor colorWithRed:245.0/255 green:228.0/255 blue:0 alpha:1.0]];
+    
+    
+    UITabBarController *tabBar = kVCFromSb(@"BSTabBarViewController", @"Main");
+    
+    self.window.rootViewController = tabBar;
+    
+    [self.window makeKeyAndVisible];
     
     return YES;
 }
