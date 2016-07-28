@@ -192,8 +192,6 @@ static NSString *const Identifier2 = @"Cell2";
 - (void)setNavigationStyle{
     
 
-    self.navigationItem.backBarButtonItem.image = [UIImage imageNamed:@"Back"];
-    self.navigationItem.backBarButtonItem.title = @"返回";
 }
 
 /*

@@ -57,6 +57,23 @@
 		E2DB90411D461EF9005B2455 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E2DB90321D461EF9005B2455 /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		E2DB90421D461EF9005B2455 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E2DB90341D461EF9005B2455 /* View+MASAdditions.m */; };
 		E2DB90431D461EF9005B2455 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E2DB90371D461EF9005B2455 /* ViewController+MASAdditions.m */; };
+		E2EE7D031D499DB2008C3828 /* NSString+SizeToFit.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EE7CF01D499DB2008C3828 /* NSString+SizeToFit.m */; };
+		E2EE7D041D499DB2008C3828 /* UICollectionViewFlowLayout+XWFullItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EE7CF21D499DB2008C3828 /* UICollectionViewFlowLayout+XWFullItem.m */; };
+		E2EE7D051D499DB2008C3828 /* UIColor+XWAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EE7CF41D499DB2008C3828 /* UIColor+XWAdd.m */; };
+		E2EE7D061D499DB2008C3828 /* UIView+ FrameChange.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EE7CF51D499DB2008C3828 /* UIView+ FrameChange.m */; };
+		E2EE7D071D499DB2008C3828 /* XWCatergoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EE7CF81D499DB2008C3828 /* XWCatergoryView.m */; };
+		E2EE7D081D499DB2008C3828 /* XWCatergoryViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EE7CFA1D499DB2008C3828 /* XWCatergoryViewCell.m */; };
+		E2EE7D091D499DB2008C3828 /* XWCatergoryViewCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EE7CFC1D499DB2008C3828 /* XWCatergoryViewCellModel.m */; };
+		E2EE7D0A1D499DB2008C3828 /* XWCatergoryViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EE7CFE1D499DB2008C3828 /* XWCatergoryViewLayout.m */; };
+		E2EE7D0B1D499DB2008C3828 /* XWCatergoryViewProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EE7D001D499DB2008C3828 /* XWCatergoryViewProperty.m */; };
+		E2EE7D0C1D499DB2008C3828 /* XWCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EE7D021D499DB2008C3828 /* XWCollectionView.m */; };
+		E2EE7D151D49C3F0008C3828 /* BGCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EE7D141D49C3F0008C3828 /* BGCommentViewController.m */; };
+		E2EE7D1E1D49CE18008C3828 /* BSCommentCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EE7D1C1D49CE18008C3828 /* BSCommentCell1.m */; };
+		E2EE7D211D49CE4D008C3828 /* BSCommentCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EE7D201D49CE4D008C3828 /* BSCommentCell2.m */; };
+		E2EE7DAB1D4A3406008C3828 /* BGStarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EE7DAA1D4A3406008C3828 /* BGStarViewController.m */; };
+		E2EE7DAE1D4A347D008C3828 /* BGJoinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EE7DAD1D4A347D008C3828 /* BGJoinViewController.m */; };
+		E2EE7DB11D4A3589008C3828 /* BSCommentCell3.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EE7DAF1D4A3589008C3828 /* BSCommentCell3.m */; };
+		E2EE7DB41D4A35AE008C3828 /* BSCommentCell4.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EE7DB21D4A35AE008C3828 /* BSCommentCell4.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -176,6 +193,40 @@
 		E2DB90351D461EF9005B2455 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
 		E2DB90361D461EF9005B2455 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 		E2DB90371D461EF9005B2455 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		E2EE7CEF1D499DB2008C3828 /* NSString+SizeToFit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SizeToFit.h"; sourceTree = "<group>"; };
+		E2EE7CF01D499DB2008C3828 /* NSString+SizeToFit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SizeToFit.m"; sourceTree = "<group>"; };
+		E2EE7CF11D499DB2008C3828 /* UICollectionViewFlowLayout+XWFullItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UICollectionViewFlowLayout+XWFullItem.h"; sourceTree = "<group>"; };
+		E2EE7CF21D499DB2008C3828 /* UICollectionViewFlowLayout+XWFullItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UICollectionViewFlowLayout+XWFullItem.m"; sourceTree = "<group>"; };
+		E2EE7CF31D499DB2008C3828 /* UIColor+XWAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+XWAdd.h"; sourceTree = "<group>"; };
+		E2EE7CF41D499DB2008C3828 /* UIColor+XWAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+XWAdd.m"; sourceTree = "<group>"; };
+		E2EE7CF51D499DB2008C3828 /* UIView+ FrameChange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ FrameChange.m"; sourceTree = "<group>"; };
+		E2EE7CF61D499DB2008C3828 /* UIView+FrameChange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FrameChange.h"; sourceTree = "<group>"; };
+		E2EE7CF71D499DB2008C3828 /* XWCatergoryView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWCatergoryView.h; sourceTree = "<group>"; };
+		E2EE7CF81D499DB2008C3828 /* XWCatergoryView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWCatergoryView.m; sourceTree = "<group>"; };
+		E2EE7CF91D499DB2008C3828 /* XWCatergoryViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWCatergoryViewCell.h; sourceTree = "<group>"; };
+		E2EE7CFA1D499DB2008C3828 /* XWCatergoryViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWCatergoryViewCell.m; sourceTree = "<group>"; };
+		E2EE7CFB1D499DB2008C3828 /* XWCatergoryViewCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWCatergoryViewCellModel.h; sourceTree = "<group>"; };
+		E2EE7CFC1D499DB2008C3828 /* XWCatergoryViewCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWCatergoryViewCellModel.m; sourceTree = "<group>"; };
+		E2EE7CFD1D499DB2008C3828 /* XWCatergoryViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWCatergoryViewLayout.h; sourceTree = "<group>"; };
+		E2EE7CFE1D499DB2008C3828 /* XWCatergoryViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWCatergoryViewLayout.m; sourceTree = "<group>"; };
+		E2EE7CFF1D499DB2008C3828 /* XWCatergoryViewProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWCatergoryViewProperty.h; sourceTree = "<group>"; };
+		E2EE7D001D499DB2008C3828 /* XWCatergoryViewProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWCatergoryViewProperty.m; sourceTree = "<group>"; };
+		E2EE7D011D499DB2008C3828 /* XWCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWCollectionView.h; sourceTree = "<group>"; };
+		E2EE7D021D499DB2008C3828 /* XWCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWCollectionView.m; sourceTree = "<group>"; };
+		E2EE7D131D49C3F0008C3828 /* BGCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGCommentViewController.h; sourceTree = "<group>"; };
+		E2EE7D141D49C3F0008C3828 /* BGCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGCommentViewController.m; sourceTree = "<group>"; };
+		E2EE7D1B1D49CE18008C3828 /* BSCommentCell1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSCommentCell1.h; sourceTree = "<group>"; };
+		E2EE7D1C1D49CE18008C3828 /* BSCommentCell1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSCommentCell1.m; sourceTree = "<group>"; };
+		E2EE7D1F1D49CE4D008C3828 /* BSCommentCell2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSCommentCell2.h; sourceTree = "<group>"; };
+		E2EE7D201D49CE4D008C3828 /* BSCommentCell2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSCommentCell2.m; sourceTree = "<group>"; };
+		E2EE7DA91D4A3406008C3828 /* BGStarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGStarViewController.h; sourceTree = "<group>"; };
+		E2EE7DAA1D4A3406008C3828 /* BGStarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGStarViewController.m; sourceTree = "<group>"; };
+		E2EE7DAC1D4A347D008C3828 /* BGJoinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BGJoinViewController.h; path = XWCatergoryView/BGJoinViewController.h; sourceTree = "<group>"; };
+		E2EE7DAD1D4A347D008C3828 /* BGJoinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BGJoinViewController.m; path = XWCatergoryView/BGJoinViewController.m; sourceTree = "<group>"; };
+		E2EE7DAF1D4A3589008C3828 /* BSCommentCell3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSCommentCell3.m; sourceTree = "<group>"; };
+		E2EE7DB01D4A3589008C3828 /* BSCommentCell3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSCommentCell3.h; sourceTree = "<group>"; };
+		E2EE7DB21D4A35AE008C3828 /* BSCommentCell4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSCommentCell4.m; sourceTree = "<group>"; };
+		E2EE7DB31D4A35AE008C3828 /* BSCommentCell4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSCommentCell4.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,8 +277,15 @@
 		74697AEF1D44DE7700F96E27 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E2EE7CEE1D499DB2008C3828 /* XWCatergoryView */,
 				74697AF01D44DE7700F96E27 /* BGMeViewController.h */,
 				74697AF11D44DE7700F96E27 /* BGMeViewController.m */,
+				E2EE7D131D49C3F0008C3828 /* BGCommentViewController.h */,
+				E2EE7D141D49C3F0008C3828 /* BGCommentViewController.m */,
+				E2EE7DA91D4A3406008C3828 /* BGStarViewController.h */,
+				E2EE7DAA1D4A3406008C3828 /* BGStarViewController.m */,
+				E2EE7DAC1D4A347D008C3828 /* BGJoinViewController.h */,
+				E2EE7DAD1D4A347D008C3828 /* BGJoinViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -242,6 +300,14 @@
 		74697AF31D44DE7700F96E27 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E2EE7DB21D4A35AE008C3828 /* BSCommentCell4.m */,
+				E2EE7DB31D4A35AE008C3828 /* BSCommentCell4.h */,
+				E2EE7DAF1D4A3589008C3828 /* BSCommentCell3.m */,
+				E2EE7DB01D4A3589008C3828 /* BSCommentCell3.h */,
+				E2EE7D1F1D49CE4D008C3828 /* BSCommentCell2.h */,
+				E2EE7D201D49CE4D008C3828 /* BSCommentCell2.m */,
+				E2EE7D1B1D49CE18008C3828 /* BSCommentCell1.h */,
+				E2EE7D1C1D49CE18008C3828 /* BSCommentCell1.m */,
 				74697AF41D44DE7700F96E27 /* friendquan.png */,
 				74697AF51D44DE7700F96E27 /* me_ok.png */,
 				74697AF61D44DE7700F96E27 /* qq.png */,
@@ -541,6 +607,33 @@
 			path = Masonry;
 			sourceTree = "<group>";
 		};
+		E2EE7CEE1D499DB2008C3828 /* XWCatergoryView */ = {
+			isa = PBXGroup;
+			children = (
+				E2EE7CEF1D499DB2008C3828 /* NSString+SizeToFit.h */,
+				E2EE7CF01D499DB2008C3828 /* NSString+SizeToFit.m */,
+				E2EE7CF11D499DB2008C3828 /* UICollectionViewFlowLayout+XWFullItem.h */,
+				E2EE7CF21D499DB2008C3828 /* UICollectionViewFlowLayout+XWFullItem.m */,
+				E2EE7CF31D499DB2008C3828 /* UIColor+XWAdd.h */,
+				E2EE7CF41D499DB2008C3828 /* UIColor+XWAdd.m */,
+				E2EE7CF51D499DB2008C3828 /* UIView+ FrameChange.m */,
+				E2EE7CF61D499DB2008C3828 /* UIView+FrameChange.h */,
+				E2EE7CF71D499DB2008C3828 /* XWCatergoryView.h */,
+				E2EE7CF81D499DB2008C3828 /* XWCatergoryView.m */,
+				E2EE7CF91D499DB2008C3828 /* XWCatergoryViewCell.h */,
+				E2EE7CFA1D499DB2008C3828 /* XWCatergoryViewCell.m */,
+				E2EE7CFB1D499DB2008C3828 /* XWCatergoryViewCellModel.h */,
+				E2EE7CFC1D499DB2008C3828 /* XWCatergoryViewCellModel.m */,
+				E2EE7CFD1D499DB2008C3828 /* XWCatergoryViewLayout.h */,
+				E2EE7CFE1D499DB2008C3828 /* XWCatergoryViewLayout.m */,
+				E2EE7CFF1D499DB2008C3828 /* XWCatergoryViewProperty.h */,
+				E2EE7D001D499DB2008C3828 /* XWCatergoryViewProperty.m */,
+				E2EE7D011D499DB2008C3828 /* XWCollectionView.h */,
+				E2EE7D021D499DB2008C3828 /* XWCollectionView.m */,
+			);
+			path = XWCatergoryView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -738,19 +831,29 @@
 				E2DB90431D461EF9005B2455 /* ViewController+MASAdditions.m in Sources */,
 				E2DB90421D461EF9005B2455 /* View+MASAdditions.m in Sources */,
 				7479CA7F1D41253600C3170B /* BaseNetManager.m in Sources */,
+				E2EE7D0C1D499DB2008C3828 /* XWCollectionView.m in Sources */,
+				E2EE7D061D499DB2008C3828 /* UIView+ FrameChange.m in Sources */,
 				74697B041D44DE7700F96E27 /* SharePlatformView.m in Sources */,
 				74697B151D451CB200F96E27 /* BGFirstDetailViewController.m in Sources */,
 				7479CA6F1D41248900C3170B /* UIColor+Extension.m in Sources */,
+				E2EE7DB11D4A3589008C3828 /* BSCommentCell3.m in Sources */,
 				E2DB903D1D461EF9005B2455 /* MASLayoutConstraint.m in Sources */,
+				E2EE7D051D499DB2008C3828 /* UIColor+XWAdd.m in Sources */,
 				E2DB90401D461EF9005B2455 /* NSArray+MASAdditions.m in Sources */,
 				E29DE3D01D4881DD00965CA9 /* BSCommentCell.m in Sources */,
 				74697B1B1D45212100F96E27 /* BGSignupGuyView.m in Sources */,
+				E2EE7D0A1D499DB2008C3828 /* XWCatergoryViewLayout.m in Sources */,
+				E2EE7D091D499DB2008C3828 /* XWCatergoryViewCellModel.m in Sources */,
 				74697B121D44E12B00F96E27 /* BGFirstPageViewCell.m in Sources */,
 				E2DB903B1D461EF9005B2455 /* MASConstraint.m in Sources */,
+				E2EE7D1E1D49CE18008C3828 /* BSCommentCell1.m in Sources */,
+				E2EE7D081D499DB2008C3828 /* XWCatergoryViewCell.m in Sources */,
+				E2EE7D0B1D499DB2008C3828 /* XWCatergoryViewProperty.m in Sources */,
 				7479CA7B1D4124E500C3170B /* BaseViewModel.m in Sources */,
 				E2DB903F1D461EF9005B2455 /* MASViewConstraint.m in Sources */,
 				E2C364A51D338C6F00AA5D95 /* AppDelegate.m in Sources */,
 				7479CA711D41248900C3170B /* UIView+Frame.m in Sources */,
+				E2EE7D071D499DB2008C3828 /* XWCatergoryView.m in Sources */,
 				7479CA6D1D41248900C3170B /* NSString+Extension.m in Sources */,
 				E2DB903E1D461EF9005B2455 /* MASViewAttribute.m in Sources */,
 				7479CA701D41248900C3170B /* UIDevice+SB.m in Sources */,
@@ -761,12 +864,19 @@
 				7479CA611D41233800C3170B /* CWStarRateView.m in Sources */,
 				E2DB90411D461EF9005B2455 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				E2C364E61D339CDA00AA5D95 /* NSObject+WCTool.m in Sources */,
+				E2EE7DAB1D4A3406008C3828 /* BGStarViewController.m in Sources */,
 				E20EB80E1D47014E00C2881D /* BGLoginViewController.m in Sources */,
+				E2EE7D041D499DB2008C3828 /* UICollectionViewFlowLayout+XWFullItem.m in Sources */,
+				E2EE7D151D49C3F0008C3828 /* BGCommentViewController.m in Sources */,
+				E2EE7D031D499DB2008C3828 /* NSString+SizeToFit.m in Sources */,
 				E266D17F1D476CF7002CCCDB /* NaBarView.m in Sources */,
+				E2EE7DAE1D4A347D008C3828 /* BGJoinViewController.m in Sources */,
 				74697AFF1D44DE7700F96E27 /* BGMeViewController.m in Sources */,
 				E2DB903C1D461EF9005B2455 /* MASConstraintMaker.m in Sources */,
 				74697B071D44DE7700F96E27 /* ZJCircularBtn.m in Sources */,
 				74697AED1D44DE3000F96E27 /* BGShareViewController.m in Sources */,
+				E2EE7DB41D4A35AE008C3828 /* BSCommentCell4.m in Sources */,
+				E2EE7D211D49CE4D008C3828 /* BSCommentCell2.m in Sources */,
 				E20EB8111D47100E00C2881D /* WCheadView.m in Sources */,
 				74697B0D1D44DF3C00F96E27 /* WCTool.m in Sources */,
 			);

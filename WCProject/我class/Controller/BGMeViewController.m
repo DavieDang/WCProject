@@ -9,6 +9,9 @@
 #import "BGMeViewController.h"
 #import "wcHeader.h"
 #import "ZJCircularBtn.h"
+#import "BGCommentViewController.h"
+#import "BGStarViewController.h"
+#import "BGJoinViewController.h"
 
 
 @interface BGMeViewController ()<ZJCircularBtnDelegate>
@@ -24,6 +27,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *commentBtn;
 @property (weak, nonatomic) IBOutlet UIButton *keHuBtn;
 
+
 @end
 
 @implementation BGMeViewController
@@ -37,7 +41,7 @@
 }
 
 - (void)setUI{
-   // self.lookBtn.layer.cornerRadius = 25;
+
     
     
     //附加毛玻璃效果
@@ -66,13 +70,7 @@
     self.keHuBtn.layer.masksToBounds = YES;
     
 
- 
-//    self.circlarBtn = [[ZJCircularBtn alloc] init];
-//    self.circlarBtn.delegate = self;
-//    CGPoint point = CGPointMake(self.view.bounds.size.width/2, self.view.bounds.size.height-100-64-150-64);
-//    [self.circlarBtn createCircularBtnWithBtnNum:4 center:point raiuds:90 btnRaiuds:100 btnImages:nil titleArray:@[@"发起的团",@"参与的团",@"待评价",@"反馈"] superView:self.bottomBgView];
-    
-    //[self.bottomBgView addSubview:self.self.circlarBtn];
+
     
 }
 
@@ -99,10 +97,14 @@
 }
 
 - (IBAction)startEvent:(id)sender {
+    [self.navigationController pushViewController:[BGStarViewController new] animated:YES];
 }
 - (IBAction)joinEvent:(id)sender {
+     [self.navigationController pushViewController:[BGJoinViewController new] animated:YES];
 }
 - (IBAction)commentEvent:(id)sender {
+    
+    [self.navigationController pushViewController:[BGCommentViewController new] animated:YES];
 }
 - (IBAction)keFuEvent:(id)sender {
 }

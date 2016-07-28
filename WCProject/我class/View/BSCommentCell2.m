@@ -6,13 +6,13 @@
 //  Copyright © 2016年 BingoMacMini. All rights reserved.
 //
 
-#import "BSCommentCell.h"
+#import "BSCommentCell2.h"
 #import "wcHeader.h"
 
 
 
 
-@implementation BSCommentCell
+@implementation BSCommentCell2
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
@@ -65,7 +65,7 @@
         [self.contentView addSubview:_commentLabel];
         [_commentLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(self.headImageView.mas_bottom).offset(51/3);
-            make.leftMargin.mas_equalTo(self.headImageView);
+            make.leftMargin.mas_equalTo(self.nameLabel);
             make.bottom.mas_equalTo(self.contentView.mas_bottom).offset(-32/3);
             make.right.mas_equalTo(-18);
         }];

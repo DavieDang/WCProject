@@ -1,0 +1,106 @@
+//
+//  BGStarViewController.m
+//  WCProject
+//
+//  Created by BingoMacMini on 16/7/28.
+//  Copyright © 2016年 BingoMacMini. All rights reserved.
+//
+
+#import "BGStarViewController.h"
+#import "wcHeader.h"
+#import "BSCommentCell3.h"
+
+@interface BGStarViewController ()<UITableViewDelegate,UITableViewDataSource>
+
+@property (nonatomic,strong) UITableView *tableView;
+
+@end
+
+@implementation BGStarViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    self.tableView.hidden = NO;
+    // Do any additional setup after loading the view.
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+#pragma mark -----tableDelegate
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    
+    return 1;
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 10;
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+  
+        BSCommentCell3 *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+        cell.headImageView.image = [UIImage imageNamed:@"caiicon.jpg"];
+        cell.nameLabel.text = @"吃货";
+        //  cell.commentLabel.text = @"很好很好6666666";
+        //cell.bgStarView.hidden = NO;
+        // cell.starView.scorePercent = 0.4;
+        cell.dateLabel.text = @"2016-07-25";
+        cell.timeLabel.text = @"开团人数";
+        [cell.yueBtn addTarget:self action:@selector(yueBtnEvent) forControlEvents:UIControlEventTouchUpInside];
+        
+        return cell;
+        
+       
+    
+   
+    
+}
+
+
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return UITableViewAutomaticDimension;
+}
+
+
+-(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    return 0.1;
+}
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
+
+- (UITableView *)tableView{
+    
+    if (!_tableView) {
+        _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStyleGrouped];
+        [_tableView registerClass:[BSCommentCell3 class] forCellReuseIdentifier:@"Cell"];
+
+        _tableView.frame = CGRectMake(0, 64, kcScreenWidth, kcScreenHeight);
+        
+        [self.view addSubview:_tableView];
+        self.automaticallyAdjustsScrollViewInsets = NO;
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+        
+        
+    }
+    return _tableView;
+}
+
+
+- (void)yueBtnEvent{
+    
+}
+
+@end
