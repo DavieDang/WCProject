@@ -34,7 +34,7 @@ static NSString *const Identifier2 = @"Cell2";
         _headerView.nameLb.text = @"美味通";
         _headerView.numLb.text = @"就餐人数：12";
         _headerView.starView.scorePercent = 0.2;
-        _headerView.yueLb.text = @"约";
+       // _headerView.yueLb.text = @"约";
         
 //        [self.view addSubview:_headerView];
 //        [_headerView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -102,6 +102,7 @@ static NSString *const Identifier2 = @"Cell2";
         [self.headArray addObject:@"aaf"];
         [self.headArray addObject:@"aaff"];
         cell.headArr = self.headArray;
+       // [cell.yueBtn addTarget:self action:@selector(yueBtn:) forControlEvents:UIControlEventTouchUpInside];
         cell.headerbgView.hidden = NO;
         
         
@@ -118,6 +119,7 @@ static NSString *const Identifier2 = @"Cell2";
         cell.bgStarView.hidden = NO;
         cell.starView.scorePercent = 0.4;
         cell.dateLabel.text = @"2016-07-25";
+        
         
         
         return cell;
@@ -193,6 +195,7 @@ static NSString *const Identifier2 = @"Cell2";
     
 
 }
+
 
 /*
 #pragma mark - Navigation

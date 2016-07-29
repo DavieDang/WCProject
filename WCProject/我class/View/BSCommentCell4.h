@@ -22,6 +22,7 @@
 
 @property (nonatomic,strong)  UIButton *yueBtn;
 
+@property (nonatomic,strong) UILabel *joinLabel;
 
 
 

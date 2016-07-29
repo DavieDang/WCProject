@@ -21,7 +21,7 @@
 @property (nonatomic,strong) UILabel *timeLabel;
 
 @property (nonatomic,strong)  UIButton *yueBtn;
-
+@property (nonatomic,strong) UILabel *joinLabel;
 
 
 

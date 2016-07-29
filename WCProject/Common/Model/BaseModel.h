@@ -10,4 +10,5 @@
 
 @interface BaseModel : NSObject
 
+
 @end

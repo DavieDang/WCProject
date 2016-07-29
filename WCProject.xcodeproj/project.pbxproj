@@ -74,6 +74,9 @@
 		E2EE7DAE1D4A347D008C3828 /* BGJoinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EE7DAD1D4A347D008C3828 /* BGJoinViewController.m */; };
 		E2EE7DB11D4A3589008C3828 /* BSCommentCell3.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EE7DAF1D4A3589008C3828 /* BSCommentCell3.m */; };
 		E2EE7DB41D4A35AE008C3828 /* BSCommentCell4.m in Sources */ = {isa = PBXBuildFile; fileRef = E2EE7DB21D4A35AE008C3828 /* BSCommentCell4.m */; };
+		E2F44C991D4B89CB000D18A5 /* BSCanteenModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F44C981D4B89CB000D18A5 /* BSCanteenModel.m */; };
+		E2F44C9D1D4B8A57000D18A5 /* BSCanteenViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F44C9C1D4B8A57000D18A5 /* BSCanteenViewModel.m */; };
+		E2F44CA11D4B8AFE000D18A5 /* BSCanteenNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E2F44CA01D4B8AFE000D18A5 /* BSCanteenNetManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -227,6 +230,12 @@
 		E2EE7DB01D4A3589008C3828 /* BSCommentCell3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSCommentCell3.h; sourceTree = "<group>"; };
 		E2EE7DB21D4A35AE008C3828 /* BSCommentCell4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSCommentCell4.m; sourceTree = "<group>"; };
 		E2EE7DB31D4A35AE008C3828 /* BSCommentCell4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSCommentCell4.h; sourceTree = "<group>"; };
+		E2F44C971D4B89CB000D18A5 /* BSCanteenModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSCanteenModel.h; sourceTree = "<group>"; };
+		E2F44C981D4B89CB000D18A5 /* BSCanteenModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSCanteenModel.m; sourceTree = "<group>"; };
+		E2F44C9B1D4B8A57000D18A5 /* BSCanteenViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSCanteenViewModel.h; sourceTree = "<group>"; };
+		E2F44C9C1D4B8A57000D18A5 /* BSCanteenViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSCanteenViewModel.m; sourceTree = "<group>"; };
+		E2F44C9F1D4B8AFE000D18A5 /* BSCanteenNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BSCanteenNetManager.h; sourceTree = "<group>"; };
+		E2F44CA01D4B8AFE000D18A5 /* BSCanteenNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BSCanteenNetManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -458,6 +467,9 @@
 		E22DFC0E1D4089C500EF40E9 /* 首页class */ = {
 			isa = PBXGroup;
 			children = (
+				E2F44C9E1D4B8ACE000D18A5 /* NetModel */,
+				E2F44C9A1D4B8A34000D18A5 /* ViewModel */,
+				E2F44C961D4B898A000D18A5 /* Model */,
 				7479CA561D411F0C00C3170B /* Resource */,
 				E22DFC141D408B7B00EF40E9 /* View */,
 				E22DFC111D408A9300EF40E9 /* BGFirstPageViewController.h */,
@@ -632,6 +644,33 @@
 				E2EE7D021D499DB2008C3828 /* XWCollectionView.m */,
 			);
 			path = XWCatergoryView;
+			sourceTree = "<group>";
+		};
+		E2F44C961D4B898A000D18A5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E2F44C971D4B89CB000D18A5 /* BSCanteenModel.h */,
+				E2F44C981D4B89CB000D18A5 /* BSCanteenModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E2F44C9A1D4B8A34000D18A5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E2F44C9B1D4B8A57000D18A5 /* BSCanteenViewModel.h */,
+				E2F44C9C1D4B8A57000D18A5 /* BSCanteenViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		E2F44C9E1D4B8ACE000D18A5 /* NetModel */ = {
+			isa = PBXGroup;
+			children = (
+				E2F44C9F1D4B8AFE000D18A5 /* BSCanteenNetManager.h */,
+				E2F44CA01D4B8AFE000D18A5 /* BSCanteenNetManager.m */,
+			);
+			path = NetModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -831,6 +870,7 @@
 				E2DB90431D461EF9005B2455 /* ViewController+MASAdditions.m in Sources */,
 				E2DB90421D461EF9005B2455 /* View+MASAdditions.m in Sources */,
 				7479CA7F1D41253600C3170B /* BaseNetManager.m in Sources */,
+				E2F44CA11D4B8AFE000D18A5 /* BSCanteenNetManager.m in Sources */,
 				E2EE7D0C1D499DB2008C3828 /* XWCollectionView.m in Sources */,
 				E2EE7D061D499DB2008C3828 /* UIView+ FrameChange.m in Sources */,
 				74697B041D44DE7700F96E27 /* SharePlatformView.m in Sources */,
@@ -843,6 +883,7 @@
 				E29DE3D01D4881DD00965CA9 /* BSCommentCell.m in Sources */,
 				74697B1B1D45212100F96E27 /* BGSignupGuyView.m in Sources */,
 				E2EE7D0A1D499DB2008C3828 /* XWCatergoryViewLayout.m in Sources */,
+				E2F44C991D4B89CB000D18A5 /* BSCanteenModel.m in Sources */,
 				E2EE7D091D499DB2008C3828 /* XWCatergoryViewCellModel.m in Sources */,
 				74697B121D44E12B00F96E27 /* BGFirstPageViewCell.m in Sources */,
 				E2DB903B1D461EF9005B2455 /* MASConstraint.m in Sources */,
@@ -856,6 +897,7 @@
 				E2EE7D071D499DB2008C3828 /* XWCatergoryView.m in Sources */,
 				7479CA6D1D41248900C3170B /* NSString+Extension.m in Sources */,
 				E2DB903E1D461EF9005B2455 /* MASViewAttribute.m in Sources */,
+				E2F44C9D1D4B8A57000D18A5 /* BSCanteenViewModel.m in Sources */,
 				7479CA701D41248900C3170B /* UIDevice+SB.m in Sources */,
 				74697B181D451DAF00F96E27 /* BGFirstDetailCell.m in Sources */,
 				E22DFC131D408A9300EF40E9 /* BGFirstPageViewController.m in Sources */,

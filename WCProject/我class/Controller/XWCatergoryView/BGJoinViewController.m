@@ -49,6 +49,7 @@
     // cell.starView.scorePercent = 0.4;
     cell.dateLabel.text = @"2016-07-25";
     cell.timeLabel.text = @"开团人数";
+     cell.joinLabel.text = @"已参加人数";
     [cell.yueBtn addTarget:self action:@selector(yueBtnEvent) forControlEvents:UIControlEventTouchUpInside];
     
     return cell;

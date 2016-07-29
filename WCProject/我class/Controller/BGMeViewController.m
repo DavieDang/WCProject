@@ -44,11 +44,11 @@
 
     
     
-    //附加毛玻璃效果
-//    UIVisualEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleExtraLight];
-//    UIVisualEffectView *effectview = [[UIVisualEffectView alloc] initWithEffect:effect];
-//    effectview.frame = self.view.bounds;
-//    [self.bottomBgView addSubview:effectview];
+   // 附加毛玻璃效果
+    UIVisualEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleExtraLight];
+    UIVisualEffectView *effectview = [[UIVisualEffectView alloc] initWithEffect:effect];
+    effectview.frame = self.view.bounds;
+    [self.bottomBgView addSubview:effectview];
     
 
     

@@ -139,27 +139,36 @@
 - (UIButton *)yueBtn {
     if(_yueBtn == nil) {
         _yueBtn = [UIButton buttonWithType:0];
-        [_yueBtn setTitle:@"约" forState:0];
-        _yueBtn.layer.borderColor = [UIColor colorWithRed:228.0/255 green:96.0/255 blue:24.0/255.0 alpha:1.0].CGColor;
-        _yueBtn.layer.borderWidth = 1;
-        
-        [_yueBtn setTitleColor:[UIColor colorWithRed:228.0/255 green:96.0/255 blue:24.0/255.0 alpha:1.0] forState:0];
-       //_yueBtn.titleLabel.textColor = [UIColor colorWithRed:228.0/255 green:96.0/255 blue:24.0/255.0 alpha:1.0];
-        
-       // _yueBtn.backgroundColor = appYellow;
+        [_yueBtn setTitle:@"退出团" forState:0];
+        _yueBtn.backgroundColor = [UIColor colorWithRed:228.0/255 green:96.0/255 blue:24.0/255.0 alpha:1.0];
+        [_yueBtn setTitleColor:[UIColor whiteColor] forState:0];
         _yueBtn.titleLabel.font = [UIFont systemFontOfSize:13];
         [self.contentView addSubview:_yueBtn];
         __weak __typeof(&*self)ws = self;
         [_yueBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.right.mas_equalTo(-12);
-            make.centerY.mas_equalTo(ws);
+            make.top.mas_equalTo(ws.joinLabel.mas_bottom).offset(3);
             make.size.mas_equalTo(CGSizeMake(50, 30));
+            make.centerX.mas_equalTo(ws.joinLabel);
         }];
         
     }
     return _yueBtn;
 }
 
+- (UILabel *)joinLabel {
+    if(_joinLabel == nil) {
+        _joinLabel = [[UILabel alloc] init];
+        _joinLabel.font = [UIFont systemFontOfSize:12];
+        _joinLabel.textColor = [UIColor colorWithRed:162.0/255 green:162.0/255 blue:162.0/255 alpha:1.0];
+        [self.contentView addSubview:_joinLabel];
+        [_joinLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.right.mas_equalTo(self.contentView.mas_right).offset(-12);
+            make.centerY.mas_equalTo(self.headImageView);
+        }];
+        
+    }
+    return _joinLabel;
+}
 
 
 - (void)awakeFromNib {

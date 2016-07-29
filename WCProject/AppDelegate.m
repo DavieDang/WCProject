@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "wcHeader.h"
+#import "BaseNetManager.h"
+#import "BSCanteenNetManager.h"
 
 
 @interface AppDelegate ()
@@ -32,6 +34,18 @@
     
     [self.window makeKeyAndVisible];
     
+    
+    [BaseNetManager POST:@"http://10.200.201.35:8015/7FanApp/Handler/InterfaceHandler.ashx?action=RES_LIST" parameters:nil completionHandler:^(id responseObj, NSError *error) {
+        NSLog(@"返回成功----%@",responseObj);
+        NSLog(@"什么鬼错误-----%@",error);
+    }];
+
+    
+    [BSCanteenNetManager completionHanle:^(id model, NSError *error) {
+        NSLog(@"=======%@",model);
+    }];
+    
+
     return YES;
 }
 
